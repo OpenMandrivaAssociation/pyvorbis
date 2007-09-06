@@ -1,13 +1,13 @@
 %define name pyvorbis
-%define version 1.3
-%define release %mkrel 8
+%define version 1.4
+%define release %mkrel 1
 %define pyoggversion 1.3
 
 Summary: A wrapper for the Vorbis libraries
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://ekyo.nerim.net/software/pyogg/%{name}-%{version}.tar.bz2
+Source0: http://ekyo.nerim.net/software/pyogg/%{name}-%{version}.tar.gz
 #gw from Debian: fix Unicode in VorbisComment, add pyao support to the example
 Patch: pyvorbis-1.3-unicode.patch
 Patch1: pyvorbis-1.3-python2.5.patch
