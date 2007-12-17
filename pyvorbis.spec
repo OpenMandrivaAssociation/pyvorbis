@@ -14,7 +14,6 @@ Patch: pyvorbis-1.3-unicode.patch
 Patch1: pyvorbis-1.5a-python2.5.patch
 License: LGPL
 Group: Development/Python
-BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: libvorbis-devel
 BuildRequires: libpython-devel
 BuildRequires: pyogg >= %pyoggversion
