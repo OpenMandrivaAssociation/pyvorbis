@@ -1,7 +1,7 @@
 %define name pyvorbis
 %define version 1.5
 %define prerel a
-%define release %mkrel 0.%prerel.3
+%define release %mkrel 0.%prerel.4
 %define pyoggversion 1.3
 
 Summary: A wrapper for the Vorbis libraries
