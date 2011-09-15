@@ -1,20 +1,18 @@
-%define name pyvorbis
-%define version 1.5
 %define prerel a
-%define release %mkrel 0.%prerel.4
 %define pyoggversion 1.3
 
 Summary: A wrapper for the Vorbis libraries
-Name: %{name}
-Version: %{version}
-Release: %{release}
+Name: pyvorbis
+Version: 1.5
+Release: %mkrel 0.%prerel.5
 Source0: http://ekyo.nerim.net/software/pyogg/%{name}-%{version}%{prerel}.tar.gz
 #gw from Debian: fix Unicode in VorbisComment, add pyao support to the example
-Patch: pyvorbis-1.3-unicode.patch
+Patch0: pyvorbis-1.3-unicode.patch
 Patch1: pyvorbis-1.5a-python2.5.patch
+# fix linking with libogg
+Patch2: pyvorbis-1.5a-fix_linking.patch
 License: LGPL
 Group: Development/Python
-BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: libvorbis-devel
 BuildRequires: libpython-devel
 BuildRequires: pyogg >= %pyoggversion
@@ -33,8 +31,9 @@ build the vorbis module.
 
 %prep
 %setup -q -n %name-%version%prerel
-%patch -p1 -b .unicode
+%patch0 -p1 -b .unicode
 %patch1 -p1 -b .python2.5
+%patch2 -p0
 
 %build
 python config_unix.py
