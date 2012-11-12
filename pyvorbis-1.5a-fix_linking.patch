@@ -1,0 +1,22 @@
+Index: setup.py
+===================================================================
+--- setup.py
++++ setup.py	2011-03-29 13:41:28.549903988 +0200
+@@ -47,6 +47,8 @@
+ 
+ ogg_include_dir = data['ogg_include_dir']
+ ogg_lib_dir = data['ogg_lib_dir']
++ogg_libs = string.split(data['ogg_libs'])
++libraries = vorbis_libs + ogg_libs
+ 
+ vorbismodule = Extension(name='vorbis',
+                          sources=['src/vorbismodule.c',
+@@ -61,7 +63,7 @@
+                                        ogg_include_dir],
+                          library_dirs=[vorbis_lib_dir,
+                                        ogg_lib_dir],
+-                         libraries=vorbis_libs)
++                         libraries=libraries)
+ 
+ setup ( name = "pyvorbis",
+         version = pyvorbis_version,
