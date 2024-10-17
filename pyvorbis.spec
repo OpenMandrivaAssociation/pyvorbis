@@ -17,7 +17,7 @@ BuildRequires: pkgconfig(vorbis)
 BuildRequires: pkgconfig(python)
 BuildRequires: pyogg >= %pyoggversion
 Requires: pyogg >= %pyoggversion
-Url: http://ekyo.nerim.net/software/pyogg/index.html
+Url: https://ekyo.nerim.net/software/pyogg/index.html
 
 %description
 pyvorbis - a Python wrapper for the Ogg/Vorbis library
