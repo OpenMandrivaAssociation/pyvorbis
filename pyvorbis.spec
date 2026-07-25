@@ -4,7 +4,7 @@
 Summary: A wrapper for the Vorbis libraries
 Name: pyvorbis
 Version: 1.5
-Release: %mkrel 0.%prerel.5
+Release: 1
 Source0: http://ekyo.nerim.net/software/pyogg/%{name}-%{version}%{prerel}.tar.gz
 #gw from Debian: fix Unicode in VorbisComment, add pyao support to the example
 Patch0: pyvorbis-1.3-unicode.patch
@@ -97,7 +97,7 @@ python setup.py install --root=$RPM_BUILD_ROOT
 + Revision: 88143
 - Import pyvorbis
 
-* Tue Nov 28 2006 Götz Waschk <waschk@mandriva.org> 1.3-6mdv2007.1
+* Tue Nov 28 2006 Gï¿½tz Waschk <waschk@mandriva.org> 1.3-6mdv2007.1
 - update file list
 
 * Mon Dec 05 2005 GÃ¶tz Waschk <waschk@mandriva.org> 1.3-5mdk
@@ -106,6 +106,6 @@ python setup.py install --root=$RPM_BUILD_ROOT
 * Sun Dec 05 2004 Michael Scherer <misc@mandrake.org> 1.3-4mdk
 - Rebuild for new python
 
-* Sat Sep 04 2004 Götz Waschk <waschk@linux-mandrake.com> 1.3-3mdk
+* Sat Sep 04 2004 Gï¿½tz Waschk <waschk@linux-mandrake.com> 1.3-3mdk
 - fix URL
 
